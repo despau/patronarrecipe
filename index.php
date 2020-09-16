@@ -99,7 +99,8 @@
                                         'theme_location'    =>  'primary',
                                         'container'         =>  false,
                                         'fallback_cb'       => false,
-                                        'depth'             =>  4
+                                        'depth'             =>  4,
+                                        'walker'            =>  new PatronarRecipe_Custom_Nav_Walker()
                                     ];
 
                                     wp_nav_menu( $args );
