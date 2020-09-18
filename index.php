@@ -89,7 +89,7 @@
 
             </div>
 
-            <p>template: index.php</p>
+            <h3>template: index.php</h3>
         </section><!-- #content end -->
 
     <!-- Footer
