@@ -40,16 +40,16 @@
                                 
                                     if( have_posts() ) {
                                         while( have_posts() ) {
-
                                             the_post();
                                             ?>
 
-                                                <div class="entry clearfix">
+                                            <div class="entry clearfix">
                                                 <div class="entry-image">
                                                     <a href="#">
                                                         <img class="image_fade" src="images/blog/standard/17.jpg">
                                                     </a>
                                                 </div>
+
                                                 <div class="entry-title">
                                                     <h2>
                                                         <a href="single.html">
@@ -57,6 +57,7 @@
                                                         </a>
                                                     </h2>
                                                 </div>
+                                                
                                                 <ul class="entry-meta clearfix">
                                                     <li><i class="icon-calendar3"></i> 10th February 2014</li>
                                                     <li>
@@ -76,6 +77,7 @@
                                                         </a>
                                                     </li>
                                                 </ul>
+
                                                 <div class="entry-content">
                                                     <p>
                                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate,
@@ -86,12 +88,9 @@
                                                     </p>
                                                     <a href="#" class="more-link">Read More</a>
                                                 </div>
-                                                </div>
-
-                                              
+                                            </div>
 
                                             <?php
-
                                         }
                                     }
                                 
