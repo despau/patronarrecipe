@@ -71,8 +71,8 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="#" class="standard-logo">PatronarRecipe</a>
-                    <a href="#" class="retina-logo">PatronarRecipe</a>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="standard-logo">PatronarRecipe</a>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="retina-logo">PatronarRecipe</a>
                 </div><!-- #logo end -->
 
                 <div class="top-advert">
