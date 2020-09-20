@@ -36,8 +36,8 @@
                         ============================================= -->
                             <div id="posts">
 
-                                <?php 
-                                
+                                <?php
+
                                     if( have_posts() ) {
                                         while( have_posts() ) {
                                             the_post();
@@ -47,7 +47,7 @@
 
                                         }
                                     }
-                                
+
                                 ?>
 
                             </div>
@@ -65,10 +65,10 @@
                                 ?>
 
                                 <!-- <a href="#" class="btn btn-outline-secondary float-left">
-                                    
+
                                 </a>
                                 <a href="#" class="btn btn-outline-dark float-right">
-                                    
+
                                 </a> -->
                             </div>
                         </div>
@@ -78,7 +78,7 @@
 
                     <!-- Sidebar
                     ============================================= -->
-                       <?php 
+                       <?php
 
                          get_sidebar();
 
@@ -89,7 +89,7 @@
 
             </div>
 
-            <h3>template: index.php</h3>
+            <h5>template: index.php</h5>
         </section><!-- #content end -->
 
     <!-- Footer

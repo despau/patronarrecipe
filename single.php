@@ -241,7 +241,7 @@
 
         </div>
 
-        <h3>template: single.php</h3>
+        <h5>template: single.php</h5>
     </section><!-- #content end -->
 
 <!-- Footer

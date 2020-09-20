@@ -11,9 +11,6 @@
 
     <?php wp_head(); ?>
 
-	<!-- Document Title
-	============================================= -->
-	<title>Index Template</title>
 
 </head>
 
@@ -33,11 +30,23 @@
                     <!-- Top Links
                     ============================================= -->
                     <div class="top-links">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+                        <?php
+
+                            if( has_nav_menu( 'secondary' ) ){
+
+                                $args = [
+                                    'theme_location'    =>  'secondary',
+                                    'container'         =>  false,
+                                    'fallback_cb'       => false,
+                                    'depth'             =>  1,
+                                    //'walker'            =>  new PatronarRecipe_Custom_Nav_Walker()
+                                ];
+
+                                wp_nav_menu( $args );
+
+                            }
+
+                        ?>
                     </div><!-- .top-links end -->
 
                 </div>
@@ -71,12 +80,25 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="standard-logo">PatronarRecipe</a>
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="retina-logo">PatronarRecipe</a>
+                    <?php
+
+                        if( has_custom_logo() ){
+                            the_custom_logo();
+                        }else{
+                            ?>
+                            <a href="<?php echo home_url( '/' ); ?>" class="standard-logo"><?php bloginfo( 'name' ); ?></a>
+                            <?php
+                        }
+
+                    ?>
                 </div><!-- #logo end -->
 
                 <div class="top-advert">
-                    <img src="images/magazine/ad.jpg">
+                    <?php
+                        if( function_exists( 'quads_ad' )){
+                            echo quads_ad( [ 'location'   =>  'patronarrecipe_header' ] );
+                        }
+                    ?>
                 </div>
 
             </div>
@@ -93,7 +115,7 @@
 
                         <!-- ul Main Menu
                         ======================================== -->
-                            <?php 
+                            <?php
 
                                 if( has_nav_menu( 'primary' ) ){
 

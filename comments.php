@@ -109,6 +109,7 @@
 
         <h3>Leave a <span>Comment</span></h3>
 
+        <h5>template: comments.php</h5>
     </div><!-- #respond end -->
 
 </div>
