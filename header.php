@@ -57,11 +57,30 @@
                     ============================================= -->
                     <div id="top-social">
                         <ul>
-                            <li><a href="#" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
-                            <li><a href="#" class="si-twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
-                            <li><a href="#" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
-                            <li><a href="tel:+55.55.5555555" class="si-call"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+55.55.5555555</span></a></li>
-                            <li><a href="mailto:info@email.com" class="si-email3"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text">info@email.com</span></a></li>
+
+                            <?php
+
+                                if( get_theme_mod( 'patronarrecipe_facebook_handle' ) ){
+                                    ?>
+
+                                        <li><a href="https://facebook.com/<?php echo get_theme_mod( 'patronarrecipe_facebook_handle' ); ?>" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
+                                        <li><a href="https://tiwtter.com/<?php echo get_theme_mod( 'patronarrecipe_tiwtter_handle' ); ?>" class="si-twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
+                                        <li><a href="https://instagram.com/<?php echo get_theme_mod( 'patronarrecipe_instagram_handle' ); ?>" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
+                                        <li><a href="tel:+55.55.5555555" class="si-call"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+55.55.5555555</span></a></li>
+                                        <li><a href="mailto:info@email.com" class="si-email3"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text">info@email.com</span></a></li>
+                                    <?php
+                                }
+
+                                if( get_theme_mod( 'patronarrecipe_facebook_handle' ) ){
+                                    ?>
+
+                                        <li><a href="https://tiwtter.com/<?php echo get_theme_mod( 'patronarrecipe_tiwtter_handle' ); ?>" class="si-twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
+                                }
+
+                            ?>
+
+
+
                         </ul>
                     </div><!-- #top-social end -->
 
