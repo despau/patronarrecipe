@@ -27,7 +27,7 @@
 
                                     <!-- Posts
                     ============================================= -->
-                    <div class="single-post nobottommargin">
+                    <div id="post-<?php the_ID(); ?>" <?php post_class( 'single-post nobottommargin' ); ?>>
 
                         <!-- Single Post
                         ============================================= -->
