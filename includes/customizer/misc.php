@@ -37,6 +37,15 @@ function patronarrecipe_misc_customizer_section( $wp_customize ){
     ] );
 
 
+    $wp_customize->add_setting( 'patronarrecipe_show_header_popular_posts', [
+        'default'       =>  false
+    ] );
+
+    $wp_customize->add_setting( 'patronarrecipe_popular_posts_widget_title', [
+        'default'       =>  __( 'Breaking Recipe News', 'patronarrecipe')
+    ] );
+
+
 
 
 
@@ -142,6 +151,34 @@ function patronarrecipe_misc_customizer_section( $wp_customize ){
             'label'          => __( 'File Report', 'patronarrecipe' ),
             'section'        => 'patronarrecipe_misc_section',
             'settings'       => 'patronarrecipe_report_file'
+            )
+        )
+    );
+
+
+    $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'patronarrecipe_show_header_popular_posts_input',
+        array(
+            'label'          => __( 'Show Header Popular Posts Widget', 'patronarrecipe' ),
+            'section'        => 'patronarrecipe_misc_section',
+            'settings'       => 'patronarrecipe_show_header_popular_posts',
+            'type'           => 'checkbox',
+            'choices'        => [
+                'yes'       => __( 'Yes', 'patronarrecipe')
+                ]
+            )
+        )
+    );
+
+
+    $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'patronarrecipe_popular_posts_widget_title_input',
+        array(
+            'label'          => __( 'Popular Posts Widget Title', 'patronarrecipe' ),
+            'section'        => 'patronarrecipe_misc_section',
+            'settings'       => 'patronarrecipe_popular_posts_widget_title'
             )
         )
     );
