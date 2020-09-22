@@ -10,7 +10,7 @@
     <div class="container clearfix">
 
         <div class="col_half">
-            <?php get_theme_mod( 'patronarrecipe_footer_copyright_text' ); ?>.<br>
+            <?php echo get_theme_mod( 'patronarrecipe_footer_copyright_text' ); ?><br>
             <div class="copyright-links">
                 <?php
 

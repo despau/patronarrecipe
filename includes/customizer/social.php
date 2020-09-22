@@ -30,8 +30,9 @@ function patronarrecipe_social_customizer_section( $wp_customize ){
     // Section
 
     $wp_customize->add_section( 'patronarrecipe_social_section', [
-        'title'       =>  __( 'Patronarrecipe Social Settings', 'patronarrecipe' ),
-        'priority'       =>  30
+        'title'          =>  __( 'Patronarrecipe Social Settings', 'patronarrecipe' ),
+        'priority'       =>  30,
+        'panel'          =>  'patronarrecipe'
     ] );
 
 

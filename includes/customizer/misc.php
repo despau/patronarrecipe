@@ -6,10 +6,12 @@ function patronarrecipe_misc_customizer_section( $wp_customize ){
 
     $wp_customize->add_setting( 'patronarrecipe_show_search', [
         'default'       =>  'yes',
+        'transport'     =>  'postMessage'
     ] );
 
     $wp_customize->add_setting( 'patronarrecipe_show_cart', [
-        'default'       =>  'yes'
+        'default'       =>  'yes',
+        'transport'     =>  'postMessage'
     ] );
 
     $wp_customize->add_setting( 'patronarrecipe_footer_copyright_text', [
@@ -31,7 +33,8 @@ function patronarrecipe_misc_customizer_section( $wp_customize ){
 
     $wp_customize->add_section( 'patronarrecipe_misc_section', [
         'title'       =>  __( 'Patronarrecipe Misc Settings', 'patronarrecipe' ),
-        'priority'       =>  30
+        'priority'       =>  30,
+        'panel'          =>  'patronarrecipe'
     ] );
 
 
@@ -75,7 +78,7 @@ function patronarrecipe_misc_customizer_section( $wp_customize ){
         $wp_customize,
         'patronarrecipe_footer_copyright_text_input',
         array(
-            'label'          => __( 'footer TOS Page', 'patronarrecipe' ),
+            'label'          => __( 'Copy Right Text', 'patronarrecipe' ),
             'section'        => 'patronarrecipe_misc_section',
             'settings'       => 'patronarrecipe_footer_copyright_text'
             )
