@@ -25,6 +25,12 @@ function patronarrecipe_enqueue() {
     wp_enqueue_style( 'patronarrecipe_responsive' );
     wp_enqueue_style( 'patronarrecipe_custom' );
 
+    // Custom Inline CSS to hook into patronarrecipe_custom css when it's enqueuing.
+    $read_more_color        =   get_theme_mod( 'patronarrecipe_read_more_color' );
+
+    wp_add_inline_style( 'patronarrecipe_custom',
+             'a.more-link{ color: ' . $read_more_color . '; border-color: '. $read_more_color . '; }'
+    );
 
 
     wp_register_script( 'ju_plugins', $uri . '/assets/js/plugins.js', [], $ver, true );

@@ -11,6 +11,17 @@
 
         <div class="col_half">
             <?php echo get_theme_mod( 'patronarrecipe_footer_copyright_text' ); ?><br>
+
+            <?php
+
+                    if(get_theme_mod( 'patronarrecipe_report_file' )){
+                        ?>
+                            <a href="<?php echo get_theme_mod( 'patronarrecipe_report_file' ); ?>">Download Report</a><br>
+                        <?php
+                    }
+
+            ?>
+
             <div class="copyright-links">
                 <?php
 
@@ -27,7 +38,6 @@
                     }
 
                 ?>
-
 
             </div>
         </div>

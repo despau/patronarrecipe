@@ -14,6 +14,7 @@ function patronarrecipe_misc_customizer_section( $wp_customize ){
         'transport'     =>  'postMessage'
     ] );
 
+
     $wp_customize->add_setting( 'patronarrecipe_footer_copyright_text', [
         'default'       =>  'Copyrights &copy; 2019 All Rights Reserved by PatronRecipe'
     ] );
@@ -25,6 +26,16 @@ function patronarrecipe_misc_customizer_section( $wp_customize ){
     $wp_customize->add_setting( 'patronarrecipe_privacy_page', [
         'default'       =>  0
     ] );
+
+
+    $wp_customize->add_setting( 'patronarrecipe_read_more_color', [
+        'default'       =>  '#1ABC9C'
+    ] );
+
+    $wp_customize->add_setting( 'patronarrecipe_report_file', [
+        'default'       =>  ''
+    ] );
+
 
 
 
@@ -107,6 +118,30 @@ function patronarrecipe_misc_customizer_section( $wp_customize ){
             'section'        => 'patronarrecipe_misc_section',
             'settings'       => 'patronarrecipe_privacy_page',
             'type'           => 'dropdown-pages'
+            )
+        )
+    );
+
+
+    $wp_customize->add_control( new WP_Customize_Color_Control(
+        $wp_customize,
+        'patronarrecipe_read_more_color_input',
+        array(
+            'label'          => __( 'Read More Link', 'patronarrecipe' ),
+            'section'        => 'patronarrecipe_misc_section',
+            'settings'       => 'patronarrecipe_read_more_color'
+            )
+        )
+    );
+
+
+    $wp_customize->add_control( new WP_Customize_Upload_Control(
+        $wp_customize,
+        'patronarrecipe_report_file_input',
+        array(
+            'label'          => __( 'File Report', 'patronarrecipe' ),
+            'section'        => 'patronarrecipe_misc_section',
+            'settings'       => 'patronarrecipe_report_file'
             )
         )
     );
