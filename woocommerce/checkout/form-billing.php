@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
 
 		foreach ( $fields as $key => $field ) {
 			$field['class']				=	[ 'form-group' ];
-			$field['input_class']	=	[ 'form-control' ];
+			$field['input_class']	=	[ 'form-control mb-4 ml-2' ];
 
 			woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
 		}

@@ -30,6 +30,7 @@ add_action( 'customize_preview_init', 'patronarrecipe_customize_preview_init' );
 add_action( 'bp_setup_nav', 'patronarrecipe_buddypress_profile_tabs' );
 //remove sidebar from woocommerce.
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
-
+//remove ec shoppage filtering
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30  );
 
 // Shortcodes
