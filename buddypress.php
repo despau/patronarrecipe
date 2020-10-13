@@ -23,7 +23,7 @@
 
     </div>
 
-    <h5>template: full-width-page.php</h5>
+    <h5>template: buddypress(base).php</h5>
 </section><!-- #content end -->
 
 <?php get_footer(); ?>
