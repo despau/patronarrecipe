@@ -28,7 +28,8 @@ add_action( 'customize_register', 'patronarrecipe_customize_register' );
 add_action( 'customize_preview_init', 'patronarrecipe_customize_preview_init' );
 //bp
 add_action( 'bp_setup_nav', 'patronarrecipe_buddypress_profile_tabs' );
-
+//remove sidebar from woocommerce.
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 
 // Shortcodes
