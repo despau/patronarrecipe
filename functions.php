@@ -18,6 +18,8 @@ include( get_theme_file_path( '/includes/customizer/enqueue.php' ));
 include( get_theme_file_path( '/includes/buddypress/profile-tabs.php' ));
 include( get_theme_file_path( '/includes/utility.php' ));
 include( get_theme_file_path( '/includes/buddypress/profile-posts.php' ));
+include( get_theme_file_path( '/includes/admin/author-fields.php' ));
+include( get_theme_file_path( '/includes/avatar.php' ));
 
 
 // Hooks
@@ -34,5 +36,10 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30  );
 //wp function to return excerpt without trailing dots. dats all there is to it.
 add_filter( 'excerpt_more', '__return_false' );
+add_action( 'show_user_profile', 'patronarrecipe_custom_user_profile_fields' );
+add_action( 'edit_user_profile', 'patronarrecipe_custom_user_profile_fields' );
+add_action( 'personal_options_update', 'patronarrecipe_save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'patronarrecipe_save_extra_profile_fields' );
+add_action( 'avatar_defaults', 'patronarrecipe_new_avatar' );
 
 // Shortcodes

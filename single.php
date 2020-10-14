@@ -21,6 +21,7 @@
 
                                 global $post;
                                 $author_ID          =   $post->post_author;
+                                $twitter            =   get_the_author_meta( 'patronarrecipe_twitter');
                                 $author_URL         =   get_author_posts_url( $author_ID );
 
                                 ?>
@@ -122,6 +123,19 @@
                                 <div class="card-body">
                                     <div class="author-image">
                                         <?php echo get_avatar( $author_ID, 90, '', false, [ 'class'=>'img-circle' ] ); ?>
+
+                                        <?php
+                                            if( $twitter ){
+                                                ?>
+                                                    <p>
+                                                        Twitter @<a href="https://twitter.com/<?php echo $twitter; ?>">
+                                                            <?php echo $twitter; ?>
+                                                        </a>
+                                                    </p>
+                                                <?php
+                                            }
+
+                                        ?>
                                     </div>
                                     <?php echo nl2br( get_the_author_meta( 'description' ) ); ?>
                                 </div>
