@@ -44,4 +44,5 @@ add_action( 'edit_user_profile_update', 'patronarrecipe_save_extra_profile_field
 add_action( 'avatar_defaults', 'patronarrecipe_new_avatar' );
 add_action( 'pre_get_posts', 'patronarrecipe_modify_homepage_query');
 
+
 // Shortcodes
