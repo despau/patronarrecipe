@@ -48,7 +48,7 @@ function patronarrecipe_register_required_plugins(){
 
 
   $config               =   [
-    'id'                =>  'prrecipe',
+    'id'                =>  'patronarrecipe',
     'menu'              =>  'tgmpa-install-plugins',
     'parent_slug'       =>  'themes.php',
     'capability'        =>  'edit_theme_options',
