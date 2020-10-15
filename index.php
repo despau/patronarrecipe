@@ -17,7 +17,7 @@
                                 'wpp_start'     =>  '<div class="section header-stick bottommargin-lg clearfix" style="padding: 20px 0;">
                                 <div>
                                     <div class="container clearfix">
-                                        <span class="badge badge-danger bnews-title">'. get_theme_mod( 'patronarrecipe_popular_posts_widget_title' ) .':</span>
+                                        <span class="badge badge-danger bnews-title ml-10">'. get_theme_mod( 'patronarrecipe_popular_posts_widget_title' ) .'Popular Posts: </span>
 
                                         <div class="fslider bnews-slider nobottommargin" data-speed="800"
                                             data-pause="6000" data-arrows="false" data-pagi="false">
@@ -109,4 +109,18 @@
 
     <!-- Footer
     ============================================= -->
+
     <?php get_footer(); ?>
+
+
+
+<!--
+    <?php
+
+        global $wp_filter, $wpdb;
+
+        echo '<pre>';
+        print_r($wpdb->queries);
+        echo '</pre>';
+
+    ?> -->
