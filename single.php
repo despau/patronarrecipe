@@ -112,11 +112,11 @@
 
                             <!-- Post Author Info
                             ============================================= -->
-                            <div class="card">
+                            <div class="card" itemscope itemtype="https://schema.org/Person" >
                                 <div class="card-header">
                                     <strong>
                                         Posted by
-                                        <a href="<?php echo $author_URL; ?>"><?php the_author(); ?></a>
+                                        <a href="<?php echo $author_URL; ?>" itemprop="name" ><?php the_author(); ?></a>
                                     </strong>
                                 </div>
 
