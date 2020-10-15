@@ -20,6 +20,7 @@ include( get_theme_file_path( '/includes/utility.php' ));
 include( get_theme_file_path( '/includes/buddypress/profile-posts.php' ));
 include( get_theme_file_path( '/includes/admin/author-fields.php' ));
 include( get_theme_file_path( '/includes/avatar.php' ));
+include( get_theme_file_path( '/includes/home-query.php' ));
 
 
 // Hooks
@@ -41,5 +42,6 @@ add_action( 'edit_user_profile', 'patronarrecipe_custom_user_profile_fields' );
 add_action( 'personal_options_update', 'patronarrecipe_save_extra_profile_fields' );
 add_action( 'edit_user_profile_update', 'patronarrecipe_save_extra_profile_fields' );
 add_action( 'avatar_defaults', 'patronarrecipe_new_avatar' );
+add_action( 'pre_get_posts', 'patronarrecipe_modify_homepage_query');
 
 // Shortcodes
