@@ -1,11 +1,12 @@
 <div class="entry clearfix">
-    
-    <?php 
+
+    <?php
         if( has_post_thumbnail() ) {
-            ?>       
+            ?>
                 <div class="entry-image">
                     <a href=" <?php the_permalink(); ?> ">
-                        <?php the_post_thumbnail( 'medium', [ 'class' => 'image_fade' ] ); ?>
+                        <!-- the name of this image is from theme setup.php -->
+                        <?php the_post_thumbnail( 'patronarrecipe-post-image', [ 'class' => 'image_fade' ] ); ?>
                     </a>
                 </div>
             <?php
@@ -17,7 +18,7 @@
         <?php the_title( '<h2><a href="'. esc_url( get_permalink() ) .'" >', '</a></h2>' ); ?>
 
     </div>
-    
+
     <ul class="entry-meta clearfix">
         <li><i class="icon-calendar3"></i> <?php echo get_the_date(  ); ?></li>
         <li>

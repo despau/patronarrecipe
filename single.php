@@ -60,7 +60,7 @@
                                     ?>
                                         <div class="entry-image">
                                             <a href=" <?php the_permalink(); ?> ">
-                                                <?php the_post_thumbnail( 'small' ); ?>
+                                                <?php the_post_thumbnail( 'patronarrecipe-post-image' ); ?>
                                             </a>
                                         </div>
                                     <?php

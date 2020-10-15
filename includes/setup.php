@@ -87,6 +87,7 @@ function patronarrecipe_setup_theme() {
         ],
     ]);
     add_theme_support( 'woocommerce' );
+    add_image_size( 'patronarrecipe-post-image', 400, 200, FALSE );
 
 
     register_nav_menu( 'primary', __( 'Primary Menu', 'patronarrecipe' ) );
