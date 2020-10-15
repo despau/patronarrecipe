@@ -15,6 +15,16 @@ function patronarrecipe_enqueue() {
     wp_register_style( 'patronarrecipe_responsive', $uri . '/assets/css/responsive.css', [], $ver );
     wp_register_style( 'patronarrecipe_custom', $uri . '/assets/css/custom.css', [], $ver );
 
+
+
+     // RTL
+     wp_register_style( 'patronarrecipe_bootstrap_rtl' , $uri . '/assets/css/bootstrap-rtl.css' );
+     wp_register_style( 'patronarrecipe_style_rtl' , $uri . '/assets/css/style-rtl.css' );
+     wp_register_style( 'patronarrecipe_dark_rtl', $uri . '/assets/css/dark-rtl.css' );
+     wp_register_style( 'patronarrecipe_font_icons_rtl', $uri . '/assets/css/font-icons-rtl.css' );
+     wp_register_style( 'patronarrecipe_responsive_rtl', $uri . '/assets/css/responsive-rtl.css' );
+
+
     wp_enqueue_style( 'patronarrecipe_google_fonts' );
     wp_enqueue_style( 'patronarrecipe_bootstrap' );
     wp_enqueue_style( 'patronarrecipe_style' );
@@ -25,6 +35,17 @@ function patronarrecipe_enqueue() {
     wp_enqueue_style( 'patronarrecipe_responsive' );
     wp_enqueue_style( 'patronarrecipe_custom' );
 
+
+    //RTL
+    if( is_rtl() ){
+        wp_enqueue_style( 'patronarrecipe_bootstrap_rtl' );
+        wp_enqueue_style( 'patronarrecipe_style_rtl' );
+        wp_enqueue_style( 'patronarrecipe_dark_rtl' );
+        wp_enqueue_style( 'patronarrecipe_font_icons_rtl' );
+        wp_enqueue_style( 'patronarrecipe_responsive_rtl' );
+    }
+
+
     // Custom Inline CSS to hook into patronarrecipe_custom css when it's enqueuing.
     $read_more_color        =   get_theme_mod( 'patronarrecipe_read_more_color' );
 
@@ -33,10 +54,10 @@ function patronarrecipe_enqueue() {
     );
 
 
-    wp_register_script( 'ju_plugins', $uri . '/assets/js/plugins.js', [], $ver, true );
-    wp_register_script( 'ju_functions', $uri . '/assets/js/functions.js', [], $ver, true );
+    wp_register_script( 'patronarrecipe_plugins', $uri . '/assets/js/plugins.js', [], $ver, true );
+    wp_register_script( 'patronarrecipe_functions', $uri . '/assets/js/functions.js', [], $ver, true );
 
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'ju_plugins' );
-    wp_enqueue_script( 'ju_functions' );
+    wp_enqueue_script( 'patronarrecipe_plugins' );
+    wp_enqueue_script( 'patronarrecipe_functions' );
 }
