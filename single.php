@@ -11,7 +11,7 @@
 
                 <!-- Post Content
                 ============================================= -->
-                <div class="postcontent nobottommargin clearfix">
+                <div class="postcontent nobottommargin clearfix" role="main">
 
                     <?php
 

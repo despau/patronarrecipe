@@ -1,7 +1,7 @@
 
 
 
-<footer id="footer" class="dark">
+<footer id="footer" class="dark" role="contentinfo">
 
 <!-- Copyrights
 ============================================= -->

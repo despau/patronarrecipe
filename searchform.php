@@ -11,7 +11,7 @@
                value="<?php the_search_query(); ?>"
                placeholder="<?php _e( 'Search', 'patronarrecipe' ); ?>"/>
         <span class="input-group-btn">
-            <button type="submit" class="btn btn-danger"><i class="icon-search"></i></button>
+            <button type="submit" class="btn btn-danger" aria-label="Search"><i class="icon-search"></i></button>
         </span>
     </div>
 </form>

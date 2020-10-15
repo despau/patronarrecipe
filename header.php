@@ -108,7 +108,7 @@
 
         <!-- Header
         ============================================= -->
-        <header id="header" class="sticky-style-2">
+        <header id="header" class="sticky-style-2" role="banner">
 
             <div class="container clearfix">
 
